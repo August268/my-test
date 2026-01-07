@@ -1,6 +1,6 @@
-import re
 import requests
 from article import Article
+from utils import slugify
 
 def get_data(url: str) -> List[Article]:
     response = requests.get(url)
@@ -19,8 +19,3 @@ def get_data(url: str) -> List[Article]:
             article_list.append(article)
 
         return article_list
-
-def slugify(input: str) -> str:
-    slugified_string = " ".join(re.sub(r"[^a-zA-Z0-9 ]", "", input).split()).lower().replace(" ", "_")
-
-    return slugified_string

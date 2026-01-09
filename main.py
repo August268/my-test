@@ -17,7 +17,7 @@ VECTOR_STORE_NAME = os.getenv("OPENAI_VECTOR_STORE_NAME")
 OPENAI_API_KEY = os.getenv("OPEN_API_KEY")
 
 def main():
-    url = "https://support.optisigns.com/api/v2/help_center/en-us/articles.json?per_page=30"
+    url = "https://support.optisigns.com/api/v2/help_center/en-us/articles.json?per_page=40"
     articles = get_data(url)
 
     create_markdown_directory(ARTICLES_DIRECTORY)

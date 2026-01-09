@@ -1,0 +1,9 @@
+services:
+  bot-scraper:
+    build: .
+    container_name: bot_scraper
+    env_file:
+      - .env
+    volumes:
+      - ./files:/app/files
+    restart: "no"

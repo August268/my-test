@@ -12,12 +12,12 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s')
 
 load_dotenv()
 
-ARTICLES_DIRECTORY = "files"
+ARTICLES_DIRECTORY = os.getenv("ARTICLE_MARKDOWN_OUTPUT")
 VECTOR_STORE_NAME = os.getenv("OPENAI_VECTOR_STORE_NAME")
 OPENAI_API_KEY = os.getenv("OPEN_API_KEY")
 
 def main():
-    url = "https://support.optisigns.com/api/v2/help_center/en-us/articles.json?per_page=40"
+    url = "https://support.optisigns.com/api/v2/help_center/en-us/articles.json?per_page=30"
     articles = get_data(url)
 
     create_markdown_directory(ARTICLES_DIRECTORY)
@@ -51,11 +51,9 @@ def main():
         # Upload chunks to vector store
         client.upload_chunks(chunks)
 
-
-
-        logging.info("--- FINAL EMBEDDING REPORT ---")
-        logging.info(f"Total Files Processed: {total_files}")
-        logging.info(f"Total Chunks Embedded: {total_chunks}")
+    logging.info("--- FINAL EMBEDDING REPORT ---")
+    logging.info(f"Total Files Processed: {total_files}")
+    logging.info(f"Total Chunks Embedded: {total_chunks}")
 
 if __name__ == "__main__":
     main()

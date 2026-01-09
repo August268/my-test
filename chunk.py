@@ -3,6 +3,6 @@ from typing import Dict
 
 @dataclass
 class Chunk:
-    id: str
+    name: str
     text: str
     metadata: Dict

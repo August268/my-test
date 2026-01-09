@@ -12,7 +12,7 @@ def get_data(url: str) -> List[Article]:
         data = response.json()
 
         for a in data["articles"]:
-            slug = slugify(a["title"])
+            slug = str(a["id"]) + "-" + slugify(a["title"])
 
             article = Article(a["id"], a["title"], a["html_url"], slug, a["body"], a["updated_at"])
 

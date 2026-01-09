@@ -27,9 +27,9 @@ title: "{chunk.metadata.get("title")}"
 slug: {chunk.metadata.get("slug")}
 source: {chunk.metadata.get("source")}
 chunk_index: {chunk.metadata.get("chunk_index")}
-"updayed_at": {chunk.metadata.get("updated_at")}
+updated_at: {chunk.metadata.get("updated_at")}
 ---
-            """
+"""
             content = metadata + chunk.text.strip()
 
             if not content:

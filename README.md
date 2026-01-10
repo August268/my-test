@@ -61,5 +61,11 @@ Now you can go to the assistant tab, click edit button and start chatting with i
 
 You can also give it instructions to define the the format of the assistant's answers.
 
+## Chunking strategy
+
+I basically split each article by the header 2 tag. After that, I have each chunk compared to the MAX_CHARS (maximum number of characters) I set.
+
+If the chunk size is over the limit, I will try and split the chunk by paragraphs until each chunk size is below MAX_CHARS
+
 ## Playground answers from my assistant
 <img width="1187" height="801" alt="image" src="https://github.com/user-attachments/assets/7dca3747-c339-44c2-a1b5-31adc2f06fae" />

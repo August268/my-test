@@ -69,3 +69,7 @@ If the chunk size is over the limit, I will try and split the chunk by paragraph
 
 ## Playground answers from my assistant
 <img width="1187" height="801" alt="image" src="https://github.com/user-attachments/assets/7dca3747-c339-44c2-a1b5-31adc2f06fae" />
+
+## Logs from running a job on DigitalOcean
+<img width="978" height="751" alt="image" src="https://github.com/user-attachments/assets/cb438e54-fd02-4039-8665-49e063de7397" />
+
